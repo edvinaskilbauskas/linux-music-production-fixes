@@ -7,16 +7,25 @@ cannot solve on its own — a crash, a missing feature, or a GUI that renders in
 and fixes it with the smallest change that actually works. Each one is idempotent, keeps
 backups, verifies its own result, and prints notes on how to undo everything it did.
 
-Tested on Ubuntu 26.04 with Wine 11.0. Nothing here is distro-specific beyond using
-`apt`/`sudo` for the steps that need root.
+Nothing here is distro-specific beyond using `apt`/`sudo` for the steps that need root.
+
+## Tested with
+
+| Component | Version |
+|---|---|
+| Distribution | Ubuntu 26.04 (kernel 7.0) |
+| Wine | 11.0 |
+| FL Studio | 2026 — 26.1.6.5639 |
+| Xfer Serum 2 | 2.1.5 |
+| Splice Desktop | 38.4.0 |
 
 ## The scripts
 
 | Script | Application | What it fixes |
 |---|---|---|
-| [`fl-studio-linux-fix.sh`](fl-studio-linux-fix.sh) | FL Studio 2026 | FLEX crashes, missing FLEX packs, "validity of the program could not be verified", MIDI driver errors, high-latency audio |
-| [`serum2-linux-fix.sh`](serum2-linux-fix.sh) | Xfer Serum 2 (VST3) | The plugin editor renders garbled/black and does not recover correctly after the window is moved or resized |
-| [`splice-linux-setup.sh`](splice-linux-setup.sh) | Splice Desktop | The Windows download cannot install at all under Wine, and the UI shows no text |
+| [`fl-studio-linux-fix.sh`](fl-studio-linux-fix.sh) | FL Studio 2026 (26.1.6) | FLEX crashes, missing FLEX packs, "validity of the program could not be verified", MIDI driver errors, high-latency audio |
+| [`serum2-linux-fix.sh`](serum2-linux-fix.sh) | Xfer Serum 2 (2.1.5, VST3) | The plugin editor renders garbled/black and does not recover correctly after the window is moved or resized |
+| [`splice-linux-setup.sh`](splice-linux-setup.sh) | Splice Desktop (38.4.0) | The Windows download cannot install at all under Wine, and the UI shows no text |
 
 ## Requirements
 
